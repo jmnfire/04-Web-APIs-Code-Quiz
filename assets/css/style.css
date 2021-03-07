@@ -1,0 +1,25 @@
+body {
+  font-size: 12px;
+  padding: 2px;
+  background-color: grey;
+}
+
+h1 {
+  font-size: 35px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+h2{
+  font-size: 20px;
+}
+
+#timer {
+  font-size: large;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 10px;
+}
