@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".//assets/css/style.css">
-    <title>Document</title>
+    <title>Code Quiz</title>
 </head>
+
 <body>
-
-<header>
-    <header class="banner">
-        <h1>Coding Game Quiz</h1>
-        <button id="startGame">Start</button>
-    </header>
-
-    <div id="countdownTimer">
-        <!-- <span class="remainingTitle"></span> -->
-        <h2>Timer:</h2>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+                <button class="btn">Answer 5</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+    </div>
+    <div class='timer'>
+        <div id="countdownTimer">Timer:</div>
         <span id="timer"></span>
     </div>
 
 
-
-
-
-
-
-
-    <script src ='.//assets/js/script.js'></script>
+    <script src='.//assets/js/script.js'></script>
 </body>
+
 </html>
