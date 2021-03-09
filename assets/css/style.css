@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: hsl(var(--hue), 100%, 20%);
-  background-size: 80%;
+  background-size: 65%;
   /* background-position: 50%; */
   max-width: 4500px;
   margin: 0 auto;
@@ -102,7 +102,7 @@ body.wrong {
 
 } */
 
-section {
+/* section {
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 0 10px 2px;
@@ -111,4 +111,64 @@ section {
   align-content: stretch;
   color: white;
   
+} */
+
+/* high score */
+.col-3 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
 }
+
+.col-9 {
+  color: black;
+}
+
+#highScore {
+  color: black;
+  font-size: 25px;
+}
+
+#row1 {
+  padding: 10px;
+}
+
+#header.card-header {
+  color: black;
+  justify-content: right;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+li{
+  font-size: 25px;
+  font-family: monospace;
+}
+
+h1 {
+  display: block;
+  font-size: 20px;
+  margin-block-start: -3.33em;
+  margin-block-end: 53vh;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+#row2 {
+  justify-content: center;
+}
+
+.row {
+  display: inline;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* @media (max-width: 375px) {
+  .body {
+    display: none;
+  }
+} */

@@ -9,6 +9,17 @@
 </head>
 
 <body>
+    <div class="col-3" id="timer">
+        <a>Time: 30</a>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="row1">
+                <a href="scores.html" id="highScore">View High Scores</a>
+                <h1 class="display-3">See how you did!</h1>
+        </div>
+            
+        </div>
+    </div>
     <div class="container">
         <div id="question-container" class="hide">
             <div id="question">Question</div>
@@ -24,14 +35,15 @@
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-    </div>
-    <div class='timer'>
-        <div id="countdownTimer">Timer:</div>
-        <span id="timer"></span>
+        <div class="sub-btn">
+            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter your initials">
+            <a class="btn btn-dark btn-lg" href="Scores.html" role="button" id="buttonInitials">Submit</a>
+        </div>
     </div>
 
 
     <script src='.//assets/js/script.js'></script>
+    <!-- <script src='./assets/js/scores.js'></script> -->
 </body>
 
 </html>
