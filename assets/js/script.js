@@ -52,6 +52,7 @@ function resetState() {
 }
 
 function selectAnswer(e) {
+  var submitForm = document.getElementById('submit-score')
   var selectedButton = e.target
   var correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
@@ -62,7 +63,8 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
   } else {
     startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    questionContainerElement.classList.add('hide')
+    submitForm.classList.remove('hide')
   }
   
 }
