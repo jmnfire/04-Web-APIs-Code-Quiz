@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=".//assets/css/style.css">
     <title>Code Quiz</title>
 </head>
 
 <body>
-    <div class="col-3" id="timer">
-        <a>Time: 25</a>
-    </div>
-    <div class="container-fluid">
-        <div class="row" id="row1">
-                <a href="scores.html" id="highScore">View High Scores</a>
-                <h1 class="high-score">See how fast you were!</h1>
-        </div>
-            
-        </div>
+    <div id="timer">
+        <a>Time: 30</a>
     </div>
     <div class="container">
+        <div class="row">
+            <a href="scores.html" id="highScore">View High Scores</a>
+            <h1 class="high-score">Check your progress!</h1>
+        </div>
+
+    </div>
+    <div class="container1">
         <div id="question-container" class="hide">
             <div id="question">Question</div>
             <div id="answer-buttons" class="btn-grid">
@@ -35,8 +36,9 @@
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-        
+
         <div class="hide" id='submit-score'>
+            <p id="score-view"></p>
             <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter your initials">
             <a class="btn btn-dark btn-lg" href="Scores.html" role="button" id="buttonInitials">Submit</a>
         </div>
@@ -44,7 +46,6 @@
 
 
     <script src='.//assets/js/script.js'></script>
-    <!-- <script src='./assets/js/scores.js'></script> -->
 </body>
 
 </html>

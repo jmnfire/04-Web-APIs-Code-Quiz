@@ -3,6 +3,15 @@ var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answer-buttons')
+var submitForm = document.getElementById('submit-score')
+var isDone = false
+
+var time = document.getElementById("timer");
+var yourScore = document.querySelector(".high-score");
+var submitButton = document.getElementById("buttonInitials");
+var inputLine = document.getElementById("inlineFormInput");
+
+var secondsLeft = 30;
 
 var shuffledQuestions, currentQuestionIndex
 
@@ -52,9 +61,12 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-  var submitForm = document.getElementById('submit-score')
   var selectedButton = e.target
   var correct = selectedButton.dataset.correct
+  if(!correct){
+    secondsLeft = secondsLeft - 5;
+    time.textContent = "Time: " + secondsLeft;
+  }
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -62,13 +74,22 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
+    document.getElementById("score-view").textContent = "Your score is: " + secondsLeft;
     startButton.innerText = 'Restart'
     questionContainerElement.classList.add('hide')
     submitForm.classList.remove('hide')
+    isDone = true
   }
 
 }
 
+/**
+ * 
+ * @param {Object} element One of the options
+ * @param {Boolean} correct Boolean checking if button has a dataset correct
+ * This function adds a class to change the look of the button after the user clicked on it
+ * representing if they got it wrong or right
+ */
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -83,7 +104,9 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-
+/**
+ * Variable holding the array of question objects
+ */
 var questions = [{
     question: 'Inside which HTML element do we put the JavaScript?',
     answers: [{
@@ -186,35 +209,20 @@ var questions = [{
   },
 ]
 
-var time = document.getElementById("timer");
-var yourScore = document.querySelector(".high-score");
-var submitButton = document.getElementById("buttonInitials");
-var inputLine = document.getElementById("inlineFormInput");
-
-var secondsLeft = 25;
-
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
     console.log(secondsLeft);
     time.textContent = "Time: " + secondsLeft;
-
-    if (secondsLeft === 0) {
-      clearInterval(timerInterval);
-      yourScore.textContent = "Your score is: " + secondsLeft;
-      alert('Game Over!')
-      submitButton.setAttribute("style", "display: inline");
-      inputLine.setAttribute("style", "display: inline-block");
-
-    } else if (questions === 5) {
+    console.log(currentQuestionIndex, ' = current index')
+    if (secondsLeft <= 0 || isDone) {
       clearInterval(timerInterval);
       console.log(secondsLeft);
-      yourScore.textContent = "Your score is: " + secondsLeft;
-      submitButton.setAttribute("style", "display: inline");
-      inputLine.setAttribute("style", "display: inline-block");
-
+      document.getElementById("score-view").textContent = "Your score is: " + secondsLeft;
+      startButton.innerText = 'Restart'
+      questionContainerElement.classList.add('hide')
+      submitForm.classList.remove('hide')
     }
-
 
   }, 1000);
 }
@@ -224,12 +232,12 @@ var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 submitButton.addEventListener("click", function (event) {
   event.stopPropagation();
   console.log("click");
-
   var initials = inputLine.value;
   var finalScore = {
     initials,
     secondsLeft
   };
+
   console.log("Final Score: " + finalScore);
   console.log(initials + " your score is: " + secondsLeft);
 

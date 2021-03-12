@@ -3,7 +3,7 @@
 ## Description 
 Purpose of this project is to create a timed JavaScript quiz, where users may save their score to their local storage after completing the coding quiz challenge by entering their initials. All the saved scores can be viewed on the high-scores page, where the user may choose to clear or save the scores. 
 
-The quiz is made up of 5 questions. The user has 25 seconds to compleat the quiz.  The game ends once the user hits 0 seconds or he answers all the questions and submits his instals. 
+The quiz is made up of 5 questions. The user has 30 seconds to compleat the quiz.  If the user gets a question wrong, 5 seconds are deducted from the timer. The game ends once the user hits 0 seconds or he answers all the questions and submits his instals. 
 
 ## Table of Contents
 * [Features](#Features)
@@ -13,9 +13,9 @@ The quiz is made up of 5 questions. The user has 25 seconds to compleat the quiz
 * [Badges](#Badges)
 
 ## Features
-- setTime
-- Media query
 - JavaScript
+- if, if else
+- setTime
 - Local Storage
 - DOM manipulation 
 - .remove, .forEach, array.from
@@ -27,11 +27,11 @@ The quiz is made up of 5 questions. The user has 25 seconds to compleat the quiz
 
 NO installation required you can view the page. If you want to look at my code, do a git clone or my repository. 
 
-[Link to website]()
+[Link to website](https://jmnfire.github.io/04-Web-APIs-Code-Quiz/)
 
 ## Usage
 
-![screenshot](assets/images/screencapture-file-Users-JovanNixon-Desktop-Homework-02-Advanced-CSS-Portfolio-First-index-html-2021-02-26-21_47_28.png)
+![screenshot](assets/images/screencapture-file-Users-JovanNixon-Desktop-04-Web-APIs-Code-Quiz-index-html-2021-03-11-23_01_41.png)
 
 
 ## License 
