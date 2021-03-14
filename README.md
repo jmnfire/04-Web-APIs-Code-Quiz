@@ -31,7 +31,7 @@ NO installation required you can view the page. If you want to look at my code, 
 
 ## Usage
 
-![screenshot](assets/images/screencapture-file-Users-JovanNixon-Desktop-04-Web-APIs-Code-Quiz-index-html-2021-03-11-23_01_41.png)
+![screenshot](assets/images/screencapture-file-Users-JovanNixon-Desktop-04-Web-APIs-Code-Quiz-index-html-2021-03-13-20_38_23.png)
 
 
 ## License 

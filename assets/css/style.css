@@ -11,7 +11,7 @@
 body {
   --hue: var(--hue-neutral);
   font-size: 12px;
-  padding: 2px;
+  padding: 50px;
   background-image: url('../images/istockphoto-1060573244-612x612.jpeg');
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +25,7 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 }
 
@@ -41,7 +41,6 @@ body.wrong {
 .container1 {
   width: 700px;
   max-width: 100%;
-  /* background-color: white; */
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 0 10px 2px;
@@ -96,32 +95,42 @@ body.wrong {
   display: none;
 }
 
-.body, .card-header{
+.body, .card {
   padding-left: 75vh;
 }
 
 #timer {
   position: absolute;
-  top: 50px;
-  left: 100px;
+  top: 125px;
+  left: 400px;
   font-size: 50px;
 }
 
+a, #timer {
+  font-family: 'Bungee Shade';
+}
+
 .container {
-  padding-top: 70vh;
-  padding-left: 15vh;
+  position: absolute;
+  bottom: -100px;
+  left: 557px;
+  font-size: 50px;
 }
 
 #highScore {
   color: black;
-  font-size: 25px;
-  position: absolute;
+  font-size: 35px;
 }
 
-#header.card-header {
+.body {
+  padding-left: 15%;
+}
+#header.card {
+  font-family: 'Bungee Shade' !important;
   color: black;
-  justify-content: right;
-  font-size: 50px;
+  position: relative;
+  font-size: 60px;
+  padding-left: 28%;
 }
 
 li {
@@ -129,7 +138,7 @@ li {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
   margin-block-end: 200px;
 }
 

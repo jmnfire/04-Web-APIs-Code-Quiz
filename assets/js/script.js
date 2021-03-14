@@ -75,7 +75,6 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
   } else {
     document.getElementById("score-view").textContent = "Your score is: " + secondsLeft;
-    startButton.innerText = 'Restart'
     questionContainerElement.classList.add('hide')
     submitForm.classList.remove('hide')
     isDone = true
@@ -219,7 +218,6 @@ function setTime() {
       clearInterval(timerInterval);
       console.log(secondsLeft);
       document.getElementById("score-view").textContent = "Your score is: " + secondsLeft;
-      startButton.innerText = 'Restart'
       questionContainerElement.classList.add('hide')
       submitForm.classList.remove('hide')
     }
